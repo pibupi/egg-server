@@ -1,0 +1,32 @@
+{
+  "extends": "eslint-config-egg",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "prettier/prettier": 1,
+    "prefer-const": 2,
+    "no-var": 2,
+    "no-multiple-empty-lines": 2, // * 上下方法之间留空行
+    "lines-between-class-members": ["error", "always"],
+    "no-this-before-super": 2, // * 在使用前前标记this/ super关键字super()
+    "eqeqeq": 2, // * 严格相等
+    "no-unused-vars": 2,
+    "comma-dangle": [2, "never"], // * 字面量对象末尾的逗号
+    "semi": 0, // * 末尾分号
+    "array-bracket-spacing": 0, // * 数组每项的间距
+    "newline-per-chained-call": 0, // * 每次调用方法链或深入成员访问后都需要换行符
+    "@typescript-eslint/explicit-function-return-type": "off", // * 返回值类型
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-var-requires": "off", // * 除在import语句中之外，禁止使用require语句
+    "@typescript-eslint/interface-name-prefix": "warn",
+    "@typescript-eslint/explicit-member-accessibility": "off", // * 在类属性和方法上需要显式的可访问性修饰符
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/ban-ts-ignore": "warn"
+  }
+}

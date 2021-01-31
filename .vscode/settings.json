@@ -1,0 +1,109 @@
+{
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  // * 主题
+  "workbench.colorTheme": "Dracula",
+  // * icon主题
+  "workbench.iconTheme": "vscode-icons",
+  // * 解决vscode打开文件覆盖
+  "workbench.editor.enablePreview": false,
+  // "open-in-browser.default": "Chrome",// 默认浏览器
+  //? Auto Rename Tag
+  //* "auto-rename-tag.activationOnLanguage": ["*"] 这样也是可以的
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "javascript",
+    "jsx", // * 配置jsx自动改变首尾标签
+    "typescript",
+    "typescriptreact",
+    "vue" // * 配置tsx自动改变首尾标签
+  ],
+  //? Code Runner
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "php": "C:\\php\\php.exe",
+    "python": "python",
+    "perl": "perl",
+    "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+    "go": "go run",
+    "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  // * jsx自动自动补全
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  //? editor配置
+  //*项目里的prettierrc中的tabWidth是配置tab键的，这里的tabSize可以配置回车键
+  "editor.tabSize": 2,
+  // * 经测试，这两个同时开启，ctrl+s就可根据eslint修复并格式化代码
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnPaste": true,
+  //? prettier配置
+  // * 单引号
+  "prettier.singleQuote": true, // 项目中如果配置了，这里就不需要了
+  // * 末尾分号
+  "prettier.semi": false,
+  // * 如果requireConfig为true，那么这个settings.json就不会格式化了
+  "prettier.requireConfig": false,
+  // * 这个是用来格式化jsonc系统配置文件的，必须开启
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 1,
+  "explorer.compactFolders": false,
+  "git.autofetch": true,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false
+  },
+  // * 终端字体
+  // "terminal.integrated.fontFamily": "monospace",
+  // Controls the font size in pixels of the terminal.
+  "terminal.integrated.fontSize": 12,
+  // The font weight to use within the terminal for non-bold text.
+  "terminal.integrated.fontWeight": "normal",
+  // The font weight to use within the terminal for bold text.
+  "terminal.integrated.fontWeightBold": "bold",
+  // Controls the letter spacing of the terminal, this is an integer value which represents the amount of additional pixels to add between characters.
+  "terminal.integrated.letterSpacing": 0,
+  // Controls the line height of the terminal, this number is multiplied by the terminal font size to get the actual line-height in pixels.
+  "terminal.integrated.lineHeight": 1.2,
+  // * 解决package.json文件第一行警告问题
+  "json.schemaDownload.enable": false
+}
